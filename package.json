@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/JasonFritsche/GEDate/issues"
   },
-  "homepage": "https://github.com/JasonFritsche/GEDate#readme"
+  "homepage": "https://github.com/JasonFritsche/GEDate#readme",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
 }
