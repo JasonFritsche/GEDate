@@ -1,0 +1,22 @@
+{
+  "name": "gedate",
+  "version": "1.0.0",
+  "description": "Good Enough Date: Useful date methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonFritsche/GEDate.git"
+  },
+  "keywords": [
+    "date"
+  ],
+  "author": "Jason Fritsche",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JasonFritsche/GEDate/issues"
+  },
+  "homepage": "https://github.com/JasonFritsche/GEDate#readme"
+}
