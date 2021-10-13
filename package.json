@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/JasonFritsche/GEDate#readme",
   "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
     "typescript": "^4.4.4"
   }
 }
