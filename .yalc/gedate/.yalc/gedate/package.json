@@ -23,15 +23,8 @@
     "url": "https://github.com/JasonFritsche/GEDate/issues"
   },
   "homepage": "https://github.com/JasonFritsche/GEDate#readme",
-  "devDependencies": {
-    "@tsconfig/recommended": "^1.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "eslint": "^8.0.0",
-    "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
-  },
   "dependencies": {
     "gedate": "file:.yalc/gedate"
-  }
+  },
+  "yalcSig": "6d77d0e89277ebc9179cab317c0de3df"
 }

@@ -11,14 +11,3 @@ export const formatUnixTimestamp = (timestamp: number) => {
 
   return `${day}, ${month} ${date}, ${year}`;
 };
-
-// Format Date string
-export const formatDateString = (dateString: string, format?: any, locale?: string) => {
-  const dateFromDateString = new Date(dateString);
-  const month = months[dateFromDateString.getUTCMonth()];
-  const day = days[dateFromDateString.getUTCDay()];
-  const date = dateFromDateString.getUTCDate();
-  const year = dateFromDateString.getFullYear();
-
-  return `${day}, ${month} ${date}, ${year}`;
-};
