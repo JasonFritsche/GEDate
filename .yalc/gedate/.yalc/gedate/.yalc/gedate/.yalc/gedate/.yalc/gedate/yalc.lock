@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "gedate": {
+      "signature": "412f70c7b0d55e106489ae69b8d65538",
+      "file": true
+    }
+  }
+}

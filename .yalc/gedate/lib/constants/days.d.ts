@@ -1,1 +1,2 @@
-export declare const days: string[];
+export declare const shortDays: string[];
+export declare const longDays: string[];
