@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.months = void 0;
-exports.months = [
+exports.longMonths = exports.shortMonths = void 0;
+exports.shortMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+exports.longMonths = [
     'January',
     'February',
     'March',
