@@ -1,1 +1,0 @@
-#GEDate (Good Enough Date)
