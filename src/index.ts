@@ -31,6 +31,3 @@ export const formatDateString = (dateString: string, format?: string, locale?: s
   }
   return formattedDate;
 };
-
-// formatDateString('Oct 20, 2021 20:17:40 GMT+00:00', 'DD MMM ddd, YYYY');
-// formatUnixTimestamp(1634771320, 'DDD MMM ddd, YYYY');
