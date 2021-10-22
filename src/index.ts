@@ -19,7 +19,7 @@ export const formatDateString = (dateString: string, format?: string, locale?: s
    * default format is mm-dd-yyyy ex. 10-18-2021
    * TODO: Implement Locale
    */
-  let formattedDate: string = '';
+  let formattedDate = '';
 
   // if format is not specified or if formay is mm-dd-yyyy, send back default
   const dateFromDateString = new Date(dateString);
