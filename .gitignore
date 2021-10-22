@@ -2,3 +2,5 @@ node_modules
 /lib
 .yalc
 yalc.lock
+*.js
+!_*.js
