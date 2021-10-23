@@ -17,22 +17,39 @@ export const handleFormat = (dateToFormat: Date, formatString: string) => {
   const monthFormat = formatString.match(/([m|M])+/g);
   const yearFormat = formatString.match(/([y|Y])+/g);
 
-  // put it all together, if any errors return default format
-  const mapObj: any = {
-    DD: dayNameFormat?.length ? formatDay(dateToFormat, dayNameFormat[0]) : '',
-    DDD: dayNameFormat?.length ? formatDay(dateToFormat, dayNameFormat[0]) : '',
-    ddd: dayNumberFormat?.length ? formatDay(dateToFormat, dayNumberFormat[0]) : '',
-    mmm: monthFormat?.length ? formatMonth(dateToFormat, monthFormat[0]) : '',
-    MMM: monthFormat?.length ? formatMonth(dateToFormat, monthFormat[0]) : '',
-    MM: monthFormat?.length ? formatMonth(dateToFormat, monthFormat[0]) : '',
-    YY: yearFormat?.length ? formatYear(dateToFormat, yearFormat[0]) : '',
-    yy: yearFormat?.length ? formatYear(dateToFormat, yearFormat[0]) : '',
-    YYYY: yearFormat?.length ? formatYear(dateToFormat, yearFormat[0]) : '',
-    yyyy: yearFormat?.length ? formatYear(dateToFormat, yearFormat[0]) : '',
+  const formatMap: Map<string, string> = new Map([]);
+
+  if (dayNameFormat?.length) {
+    dayNameFormat.forEach((format) => {
+      formatMap.set(format, formatDay(dateToFormat, dayNameFormat[0]));
+    });
+  }
+
+  if (dayNumberFormat?.length) {
+    dayNumberFormat.forEach((format) => {
+      formatMap.set(format, formatDay(dateToFormat, dayNumberFormat[0]));
+    });
+  }
+
+  if (monthFormat?.length) {
+    monthFormat.forEach((format) => {
+      formatMap.set(format, formatMonth(dateToFormat, monthFormat[0]));
+    });
+  }
+
+  if (yearFormat?.length) {
+    yearFormat.forEach((format) => {
+      formatMap.set(format, formatYear(dateToFormat, yearFormat[0]));
+    });
+  }
+
+  const getMatchedValue = (matched: string) => {
+    const returnValue = formatMap.get(matched);
+    // long day, this probably needs to be revised
+    return returnValue ?? '';
   };
-  const formattedString = formatString.replace(
-    /\b(?:dd|DDD|ddd|mmm|MMM|MM|YY|yy|YYYY|yyyy)\b/gi,
-    (matched) => mapObj[matched],
-  );
+
+  const formatMapKeysRegex = new RegExp([...formatMap.keys()].join('|'), 'gi');
+  const formattedString = formatString.replace(formatMapKeysRegex, (matched) => getMatchedValue(matched));
   return formattedString;
 };
