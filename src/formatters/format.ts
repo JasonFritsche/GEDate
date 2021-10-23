@@ -5,7 +5,7 @@ import { formatYear } from './yearFormatter';
 // default format if no format is provided or if format is invalid
 export const defaultFormat = (dateToFormat: Date) => {
   const day = dateToFormat.getUTCDate();
-  const month = dateToFormat.getUTCMonth();
+  const month = dateToFormat.getUTCMonth() + 1;
   const year = dateToFormat.getUTCFullYear();
   return `${month}-${day}-${year}`;
 };
