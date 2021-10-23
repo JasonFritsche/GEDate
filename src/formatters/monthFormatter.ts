@@ -13,7 +13,7 @@ export const formatMonth = (dateToFormat: Date, monthFormat: string): string => 
     // should either be mm or MM
     if (splitMonthFormat.every((letter) => letter === 'm')) {
       // we have 2 lowercase m's
-      formattedMonth = dateToFormat.getMonth().toString();
+      formattedMonth = (dateToFormat.getMonth() + 1).toString();
     } else if (splitMonthFormat.every((letter) => letter === 'M')) {
       // we have 2 uppercase M's
       const month = dateToFormat.getMonth();
