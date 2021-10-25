@@ -26,7 +26,7 @@ The format (string) argument is optional, if you do not provide it, the returned
 The format string is just that, a string. You may choose to pass in whatever string value you want, the special values denoted in the table above will be replaced with the formatted value.
 
 Examples:
-`DDD MMM dd, YYYY` would be formatted in to "Saturday October 31, 2021" (assuming that is the date/timestamp that I passed in to the format function).
+`DDD MMM dd, YYYY` would be formatted in to "Saturday October 31, 2021" (assuming that is the date/timestamp that I passed in to the format function).  
 `DD MM dd, YY` would be formatted in to "Sat Oct 31, 21" (assuming that is the date/timestamp that I passed in to the format function).
 
 ## formatUnixTimestamp
