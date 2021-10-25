@@ -30,18 +30,18 @@ Examples:
 `DD MM dd, YY` would be formatted in to "Sat Oct 31, 21" (assuming that is the date/timestamp that I passed in to the format function).
 
 ## formatUnixTimestamp
-*Formats a Unix timestamp*
-Returns a string
-Arguments:
+*Formats a Unix timestamp*  
+Returns a string  
+Arguments:  
 | Name | Type |Description|Optional| Example|
 |--|--|--|--|--|
 | timestamp | number |a unix timestamp| no | 1635126143 |
 | format | string |string as described in the "Format String" section of the docs| yes | "MMM dd YYYY" |
 
 ## formatDateString
-*Formats a Unix timestamp*
-Returns a string
-Arguments:
+*Formats a Unix timestamp*  
+Returns a string  
+Arguments:  
 | Name | Type |Description|Optional| Example|
 |--|--|--|--|--|
 | dateString | string |A string value representing a date, specified in a format recognized by the [`Date.parse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) method.| no | 'December 31, 2020 06:55:00'|
