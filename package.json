@@ -10,12 +10,12 @@
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "npx eslint . --ext .ts",
+    "lint": "eslint . --ext .ts",
     "test": "jest --config jestconfig.json",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
+    "prepare": "run-s build",
+    "prepublishOnly": "run-s test lint",
+    "preversion": "run-s lint",
+    "version": "run-s format && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "repository": {
@@ -38,6 +38,7 @@
     "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^8.0.0",
     "jest": "^27.3.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.4.1",
     "ts-jest": "^27.0.7",
     "typescript": "^4.4.4"
