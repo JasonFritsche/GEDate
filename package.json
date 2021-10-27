@@ -8,11 +8,15 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "run-s build:*",
+    "build:import": "tsc --project tsconfig.import.json",
+    "build:require": "tsc --project tsconfig.require.json",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint . --ext .ts",
     "test": "jest --config jestconfig.json",
-    "prepare": "run-s build",
+    "prepare": "run-s build prepare:*",
+    "prepare:import": "tsc --noEmit --project tsconfig.import.json",
+    "prepare:require": "tsc --noEmit --project tsconfig.require.json",
     "prepublishOnly": "run-s test lint",
     "preversion": "run-s lint",
     "version": "run-s format && git add -A src",
